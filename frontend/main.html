@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plants</title>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" href="main.css">
+   
+</head>
+<body class="body">
+    <div class="decorative-background">
+        <img src="leaf.png" class="floating-leaf" width="60" />
+        <img src="leaf.png" class="floating-leaf" width="60" />
+        <img src="leaf.png" class="floating-leaf" width="60" />
+    </div>
+    
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="main.html" class="active">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <div class="logo">Plants</div>
+                <li><a href="ourteam.html">Our Team</a></li>
+            
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><img src="logo.png" width="50px" height="50px"></li>
+                <li><a class="login" href="forn.htm">Login</a></li>
+            </ul>
+        </nav>
+        <div class="parallax-section">
+            <div class="glass-box hero-content">
+                <h1>Welcome to Plants</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, enim? Possimus dignissimos similique a labore culpa est illum, error facilis laborum, tempore ducimus accusamus odio modi fuga, cum quo placeat.</p>
+                <button>Read More</button>
+            </div>
+        </div>
+        <div class="scroll-icon">
+            <a href="7.html">&#8595</a>
+        </div>
+    </header>
+
+    <div class="body">
+        <div class="container">
+            <div class="plant-diagonser">
+                Plant's Personal Doctor
+            </div>
+            <div class="header1">
+                Have you ever searched 'what's wrong with my plant'? The results may have been disappointing...<br><br>
+                No more with <strong>Blossom!</strong> Simply snap a photo of the issue to get a diagnosis.<br><strong>Blossom!</strong> will give you detailed info on the disease, what caused it, how to treat it, and how to prevent it.
+            </div>
+            
+            <div class="diagnose-block">
+                <div class="card">
+                    <div>
+                        <label for="fileInput" class="file-upload-label">
+                            <img src="https://th.bing.com/th/id/R.7cf76eca6b48317a83b948319850faf2?rik=0K6JakkWxbEktg&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f4%2fMagnifying-Glass-PNG-Free-Download.png&ehk=FfU29cZaycLUXSTQeQ97vIAFcKuox7jjxav4LLRljgg%3d&risl=&pid=ImgRaw&r=0" alt="Magnifying glass">
+                            <strong class="enlarge">SELECT AN IMAGE</strong>
+                            <span class="enlarge">Start diagnosing</span>
+                        </label>
+                        <input type="file" id="fileInput" accept="image/*">
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Overwatering.webp" alt="Overwatering">
+                    <div class="card-label">Overwatering</div>
+                </div>
+                <div class="card">
+                    <img src="Nutrient Deficiency.jpg" alt="Nutrient Deficiency">
+                    <div class="card-label">Nutrient deficiency</div>
+                </div>
+                <div class="card">
+                    <img src="Powdery Mildew.jpg" alt="Powdery Mildew">
+                    <div class="card-label">Powdery mildew</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        
+        <div class="watering-plant-container">
+            <div class="watering-plant-overlay"></div>
+    
+            <!-- Decorative Leaves -->
+            <img src="leaf.png" class="leaf leaf1" />
+            <img src="leaf.png" class="leaf leaf2" />
+            <img src="leaf.png" class="leaf leaf3" />
+        
+            <div class="watering-section">
+                <h2>Watering Assistant</h2>
+                <p>Keep your plants hydrated! Click below to check how much water your plant needs today.</p>
+                <div class="watering-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2909/2909765.png" alt="Watering Can" />
+                    <h2>Smart Watering Assistant</h2>
+                    <button id="waterPlantBtn" class="water-btn">💧 Water the Plant</button>
+                    <p id="waterMessage"></p>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            document.getElementById('waterPlantBtn').addEventListener('click', function () {
+                const waterLevels = [
+                    "🌿 Needs just 100ml of water today.",
+                    "🌊 Requires 250ml of water.",
+                    "🪴 Give it 500ml — it's thirsty!",
+                    "🌼 Minimal water needed — 50ml only.",
+                    "🌧️ No watering needed today (soil is moist)."
+                ];
+                const randomWater = waterLevels[Math.floor(Math.random() * waterLevels.length)];
+                const message = document.getElementById('waterMessage');
+                message.classList.remove('show');
+                setTimeout(() => {
+                    message.innerText = randomWater;
+                    message.classList.add('show');
+                }, 200);
+            });
+        </script>
+    
+
+</html>
