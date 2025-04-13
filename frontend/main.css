@@ -1,0 +1,716 @@
+
+.watering-guide-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-family: "Merriweather", serif;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.watering-guide-btn:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.watering-guide-btn:active {
+    transform: translateY(0);
+}
+
+.watering-guide-btn i {
+    margin-right: 8px;
+}
+
+/* Modal Styles for Watering Guide */
+.watering-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #f8f8f8;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+}
+
+.water-drop {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #00B4D8;
+    border-radius: 50% 50% 30% 70%;
+    transform: rotate(-45deg);
+    margin-right: 10px;
+}
+
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            max-width: 800px;
+            padding: 20px;
+        }
+        
+        .card {
+            background-color: rgba(201, 207, 202, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card img {
+            width: 90%;
+            height: auto;
+            max-height: 80%;
+            object-fit: contain;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .card-label {
+            color: rgb(24, 25, 24);
+            border-radius: 9%;
+            font-size: x-large;
+            font-family: "Merriweather", serif;
+        }
+        
+        .card h3 {
+            margin: 0 0 10px;
+            color: #333;
+            font-size: 16px;
+            word-break: break-word;
+        }
+        
+        .card p {
+            color: #666;
+            margin: 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .file-upload-label {
+            width: 90%;
+            height: 90%;
+            margin: auto;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border: 2px dashed #a8dadc;
+            padding: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+        }
+        
+        .file-upload-label:hover {
+            background-color: #e0f7fa;
+        }
+        
+        .card:has(.file-upload-label) {
+            position: relative;
+            min-height: 200px;
+            display: flex;
+        }
+        
+        .file-upload-label img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        
+        .file-upload-label strong, 
+        .file-upload-label span {
+            display: block;
+            width: 100%;
+        }
+        
+        body {
+            background-color: #7f1717;
+            background-image: url("8.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        header {
+            position: relative;
+            height: 100vh;
+            background-image: url('images/header-bg.jpg'); /* Update path */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            font-size: 24px;
+            font-family: "Lilita One", sans-serif;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            background-color: rgb(255, 255, 255);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-transform: uppercase;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #0d0c0c;
+            font-weight: 600;
+        }
+        
+        nav ul li a.active {
+            color: orange;
+        }
+        
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #12c7be;
+            font-family: 'Allura';
+        }
+        
+        .plant-diagonser {
+            font-size: 96px;
+            font-family: "Lilita One", sans-serif;
+            text-align: center;
+            margin: auto;
+        }
+        
+        .hero-content {
+            margin: auto;
+            text-align: center;
+            color: rgb(245, 234, 234);
+            padding: 40px;
+            border-radius: 10px;
+            background-color: rgba(177, 181, 179, 0.2);
+            width: 50%;
+            max-width: 800px;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content p {
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-content button {
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .hero-content button:hover {
+            background-color: #e69500;
+        }
+        
+        .scroll-icon {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: white;
+        }
+        
+        .body1 {
+            font-family: 'Segoe UI', sans-serif;
+            background: hsl(150, 25%, 98%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            margin: auto;
+            background-image: url("3.jpeg");
+            color: rgb(16, 10, 10);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .header1 {
+            font-size: 28px;
+            text-align: center;
+            font-family: "Winky Rough", sans-serif;
+            margin-top: 10px;
+        }
+        
+        .diagnose-block {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 5% auto;
+            width: 80%;
+            max-width: 600px;
+        }
+        
+        .start-diagnosing-icon {
+            font-size: 40px;
+            color: #80cbc4;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .parallax-section {
+            background-image: url("8.jpeg");
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-shadow: 1px 1px 5px black;
+        }
+        
+        .parallax-section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .parallax-section button {
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            background-color: #00aaff;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
+        }
+        
+        .parallax-section button:hover {
+            background-color: #0077cc;
+        }
+        
+        #fileInput {
+            display: none;
+        }
+        
+        .enlarge {
+            font-size: x-large;
+        }
+        
+        .login {
+            background-color: green;
+            color: white;
+            border-radius: 30px;
+            width: 110px;
+            padding: 12px;
+            font-family: "Winky Rough", sans-serif;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .plant-diagonser {
+                font-size: 48px;
+            }
+            
+            .hero-content {
+                width: 90%;
+                padding: 20px;
+            }
+            
+            .hero-content h1 {
+                font-size: 36px;
+            }
+            
+            .hero-content p {
+                font-size: 18px;
+            }
+            
+            .diagnose-block {
+                grid-template-columns: 1fr;
+                width: 90%;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+        }
+        
+        .watering-section {
+            background: linear-gradient(rgba(255, 255, 255,0.9), rgba(8, 161, 8, 0.8));
+            border: 3px solid #10da1a;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 50px auto;
+            height: 70%;
+            width: 30%;
+            max-width: 800px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+    
+
+.watering-section h2 {
+    font-family: 'Lilita One', cursive;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+    text-shadow: 1px 1px 4px #030303;
+}
+
+.watering-section p {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #131413;
+}
+.watering-section img{
+    width: 300px;
+    height: 350px;
+}
+
+.watering-section img.decor-icon {
+    position: absolute;
+    width: 30px;
+    opacity: 0.2;
+}
+
+.watering-section .leaf1 {
+    top: -20px;
+    left: -20px;
+    transform: rotate(-20deg);
+}
+
+.watering-section .leaf2 {
+    bottom: -20px;
+    right: -20px;
+    transform: rotate(30deg);
+}
+
+
+.watering-info {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1b5e20;
+    text-align: center;
+    background-color: rgba(200, 255, 200, 0.4);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+    .water-btn {
+        padding: 12px 28px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 18px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display:flex;
+        justify-content: center;
+    }
+
+    .water-btn:hover {
+        background-color: #388e3c;
+        transform: scale(1.05);
+    }
+
+    #waterMessage {
+        font-size: 25px;
+        color: #f6f2f2;
+        margin-top: 20px;
+        font-weight: 700;
+        min-height: 30px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    #waterMessage.show {
+        opacity: 1;
+    }
+    .decorative-background {
+        background-image: url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: overlay;
+    }
+    
+    .glass-box {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 40px;
+        margin: 40px auto;
+        max-width: 700px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    }
+    .floating-leaf {
+        position: absolute;
+        width:150px;
+        height: 150px;
+        animation: float 15s linear infinite;
+        opacity: 1; /* Set opacity to 1 for full visibility */
+        z-index: 100; /* Increased z-index for better visibility */
+    }
+    
+    .floating-leaf:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+    .floating-leaf:nth-child(2) { top: 30%; left: 80%; animation-delay: 5s; }
+    .floating-leaf:nth-child(3) { top: 60%; left: 10%; animation-delay: 10s; }
+    
+    @keyframes float {
+        0% { transform: translateY(0) rotate(0deg); }
+        100% { transform: translateY(100vh) rotate(360deg); }
+    }
+        
+    .card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+    .plant-diagonser {
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        color: #1b5e20;
+    }
+    
+    .header1 strong {
+        color: #388e3c;
+    }
+    .watering-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0;
+    }
+    /* New section specifically for "watering plant" */
+    .watering-plant-container {
+        position: relative;
+        height: 100vh;
+        background-image: url('https://images.unsplash.com/photo-1534710961216-75c88202f43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        overflow: hidden;
+    }
+
+    .watering-plant-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.4);
+        z-index: 1;
+    }
+
+    .watering-section {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 40px;
+        background-color: rgba(76, 175, 80, 0.7);
+        border-radius: 15px;
+        max-width: 800px;
+        margin: 0 auto;
+        backdrop-filter: blur(5px);
+    }
+
+    .watering-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .watering-section p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+
+    .watering-center img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 20px;
+        filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+    }
+
+    .water-btn {
+        background-color: #00B4D8;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        margin-top: 20px;
+    }
+
+    .water-btn:hover {
+        background-color: #0096C7;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+
+    #waterMessage {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        opacity: 0;
+        transition: opacity 0.5s;
+        min-height: 50px;
+    }
+
+    #waterMessage.show {
+        opacity: 1;
+    }
+
+    /* Floating Leaves Animation */
+    .leaf {
+        position: absolute;
+        z-index: 1;
+        width: 60px;
+        height: auto;
+        opacity: 0.8;
+        animation: float 15s infinite linear;
+    }
+
+    .leaf1 {
+        top: 10%;
+        left: 10%;
+        animation-delay: 0s;
+        width:200px;
+        height: 200px;
+    }
+
+    .leaf2 {
+        top: 30%;
+        right: 15%;
+        animation-delay: 3s;
+        width:200px;
+        height: 200px;
+    }
+
+    .leaf3 {
+        bottom: 20%;
+        left: 20%;
+        animation-delay: 6s;
+        width:200px;
+        height: 200px;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-30px) rotate(10deg); }
+        100% { transform: translateY(0) rotate(0deg); }
+    }
+
+    @media (max-width: 768px) {
+        .watering-section {
+            padding: 20px;
+            width: 90%;
+        }
+        
+        .watering-section h2 {
+            font-size: 2rem;
+        }
+        
+        .watering-section p {
+            font-size: 1rem;
+        }
+        
+        .water-btn {
+            padding: 12px 25px;
+            font-size: 1rem;
+        }
+    }
