@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plants</title>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link  rel="stylesheet" href="main.css">
+    <!-- <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            max-width: 800px;
+            padding: 20px;
+        }
+        
+        .card {
+            background-color: rgba(201, 207, 202, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card img {
+            width: 90%;
+            height: auto;
+            max-height: 80%;
+            object-fit: contain;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .card-label {
+            color: rgb(24, 25, 24);
+            border-radius: 9%;
+            font-size: x-large;
+            font-family: "Merriweather", serif;
+        }
+        
+        .card h3 {
+            margin: 0 0 10px;
+            color: #333;
+            font-size: 16px;
+            word-break: break-word;
+        }
+        
+        .card p {
+            color: #666;
+            margin: 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .file-upload-label {
+            width: 90%;
+            height: 90%;
+            margin: auto;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border: 2px dashed #a8dadc;
+            padding: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+        }
+        
+        .file-upload-label:hover {
+            background-color: #e0f7fa;
+        }
+        
+        .card:has(.file-upload-label) {
+            position: relative;
+            min-height: 200px;
+            display: flex;
+        }
+        
+        .file-upload-label img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        
+        .file-upload-label strong, 
+        .file-upload-label span {
+            display: block;
+            width: 100%;
+        }
+        
+        body {
+            background-color: #7f1717;
+            background-image: url("8.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        header {
+            position: relative;
+            height: 100vh;
+            background-image: url('images/header-bg.jpg'); /* Update path */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            font-size: 24px;
+            font-family: "Lilita One", sans-serif;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            background-color: rgb(255, 255, 255);
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-transform: uppercase;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #0d0c0c;
+            font-weight: 600;
+        }
+        
+        nav ul li a.active {
+            color: orange;
+        }
+        
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #12c7be;
+            font-family: 'Allura';
+        }
+        
+        .plant-diagonser {
+            font-size: 96px;
+            font-family: "Lilita One", sans-serif;
+            text-align: center;
+            margin: auto;
+        }
+        
+        .hero-content {
+            margin: auto;
+            text-align: center;
+            color: rgb(245, 234, 234);
+            padding: 40px;
+            border-radius: 10px;
+            background-color: rgba(177, 181, 179, 0.2);
+            width: 50%;
+            max-width: 800px;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content p {
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-content button {
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .hero-content button:hover {
+            background-color: #e69500;
+        }
+        
+        .scroll-icon {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: white;
+        }
+        
+        .body1 {
+            font-family: 'Segoe UI', sans-serif;
+            background: hsl(150, 25%, 98%);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            margin: auto;
+            background-image: url("3.jpeg");
+            color: rgb(16, 10, 10);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .header1 {
+            font-size: 28px;
+            text-align: center;
+            font-family: "Winky Rough", sans-serif;
+            margin-top: 10px;
+        }
+        
+        .diagnose-block {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 5% auto;
+            width: 80%;
+            max-width: 600px;
+        }
+        
+        .start-diagnosing-icon {
+            font-size: 40px;
+            color: #80cbc4;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .parallax-section {
+            background-image: url("8.jpeg");
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-shadow: 1px 1px 5px black;
+        }
+        
+        .parallax-section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .parallax-section button {
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            background-color: #00aaff;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
+        }
+        
+        .parallax-section button:hover {
+            background-color: #0077cc;
+        }
+        
+        #fileInput {
+            display: none;
+        }
+        
+        .enlarge {
+            font-size: x-large;
+        }
+        
+        .login {
+            background-color: green;
+            color: white;
+            border-radius: 30px;
+            width: 110px;
+            padding: 12px;
+            font-family: "Winky Rough", sans-serif;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .plant-diagonser {
+                font-size: 48px;
+            }
+            
+            .hero-content {
+                width: 90%;
+                padding: 20px;
+            }
+            
+            .hero-content h1 {
+                font-size: 36px;
+            }
+            
+            .hero-content p {
+                font-size: 18px;
+            }
+            
+            .diagnose-block {
+                grid-template-columns: 1fr;
+                width: 90%;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+        }
+    </style> -->
+</head>
+<body class="body">
+    <div class="decorative-background">
+        <img src="leaf.png" class="floating-leaf" width="60" />
+        <img src="leaf.png" class="floating-leaf" width="60" />
+        <img src="leaf.png" class="floating-leaf" width="60" />
+    </div>
+    
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="main.html" class="active">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <div class="logo">Plants</div>
+                <li><a href="ourteam.html">Our Team</a></li>
+            
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><img src="logo.png" width="50px" height="50px"></li>
+                <li><a class="login" href="forn.htm">Login</a></li>
+            </ul>
+        </nav>
+        <div class="parallax-section">
+            <div class="glass-box hero-content">
+                <h1>Welcome to Plants</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, enim? Possimus dignissimos similique a labore culpa est illum, error facilis laborum, tempore ducimus accusamus odio modi fuga, cum quo placeat.</p>
+                <button>Read More</button>
+            </div>
+        </div>
+        <div class="scroll-icon">
+            <a href="7.html">&#8595</a>
+        </div>
+    </header>
+
+    <div class="body">
+        <div class="container">
+            <div class="plant-diagonser">
+                Plant's Personal Doctor
+            </div>
+            <div class="header1">
+                Have you ever searched 'what's wrong with my plant'? The results may have been disappointing...<br><br>
+                No more with <strong>Blossom!</strong> Simply snap a photo of the issue to get a diagnosis.<br><strong>Blossom!</strong> will give you detailed info on the disease, what caused it, how to treat it, and how to prevent it.
+            </div>
+            
+            <div class="diagnose-block">
+                <div class="card">
+                    <div>
+                        <label for="fileInput" class="file-upload-label">
+                            <img src="https://th.bing.com/th/id/R.7cf76eca6b48317a83b948319850faf2?rik=0K6JakkWxbEktg&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f4%2fMagnifying-Glass-PNG-Free-Download.png&ehk=FfU29cZaycLUXSTQeQ97vIAFcKuox7jjxav4LLRljgg%3d&risl=&pid=ImgRaw&r=0" alt="Magnifying glass">
+                            <strong class="enlarge">SELECT AN IMAGE</strong>
+                            <span class="enlarge">Start diagnosing</span>
+                        </label>
+                        <input type="file" id="fileInput" accept="image/*">
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Overwatering.webp" alt="Overwatering">
+                    <div class="card-label">Overwatering</div>
+                </div>
+                <div class="card">
+                    <img src="Nutrient Deficiency.jpg" alt="Nutrient Deficiency">
+                    <div class="card-label">Nutrient deficiency</div>
+                </div>
+                <div class="card">
+                    <img src="Powdery Mildew.jpg" alt="Powdery Mildew">
+                    <div class="card-label">Powdery mildew</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        
+        <div class="watering-plant-container">
+            <div class="watering-plant-overlay"></div>
+    
+            <!-- Decorative Leaves -->
+            <img src="leaf.png" class="leaf leaf1" />
+            <img src="leaf.png" class="leaf leaf2" />
+            <img src="leaf.png" class="leaf leaf3" />
+        
+            <div class="watering-section">
+                <h2>Watering Assistant</h2>
+                <p>Keep your plants hydrated! Click below to check how much water your plant needs today.</p>
+                <div class="watering-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2909/2909765.png" alt="Watering Can" />
+                    <h2>Smart Watering Assistant</h2>
+                    <button id="waterPlantBtn" class="water-btn">💧 Water the Plant</button>
+                    <p id="waterMessage"></p>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            document.getElementById('waterPlantBtn').addEventListener('click', function () {
+                const waterLevels = [
+                    "🌿 Needs just 100ml of water today.",
+                    "🌊 Requires 250ml of water.",
+                    "🪴 Give it 500ml — it's thirsty!",
+                    "🌼 Minimal water needed — 50ml only.",
+                    "🌧️ No watering needed today (soil is moist)."
+                ];
+                const randomWater = waterLevels[Math.floor(Math.random() * waterLevels.length)];
+                const message = document.getElementById('waterMessage');
+                message.classList.remove('show');
+                setTimeout(() => {
+                    message.innerText = randomWater;
+                    message.classList.add('show');
+                }, 200);
+            });
+        </script>
+    
+
+</html>
