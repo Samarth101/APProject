@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom - Plant Care Solutions</title>
+    <link href="https://font<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blossom - Plant Care Solutions</title>
+        <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="fapp.css">
+    </head>
+    <body>
+        <header class="header">
+            <nav>
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Services</a>
+                        <ul class="dropdown-content">
+                            <li><a href="prediction.html">Plant Diagnosis</a></li>
+                            <li><a href="waterplant.html">Water Calculator</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="ourteam.html">Our Team</a></li>
+                    <li class="logo"><strong>Blossom</strong></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><img src="logo.png" width="40px" height="40px" alt="Blossom Logo"></li>
+                    <li><a class="login" href="forn.htm">Login</a></li>
+                </ul>
+            </nav>
+            
+            <div class="parallax-section">
+                <div class="glass-box hero-content">
+                    <h1>Welcome to Blossom</h1>
+                    <p>Your trusted companion in plant care. We combine technology and expertise to help your plants thrive.</p>
+                    <button>Get Started</button>
+                </div>
+            </div>
+            
+            <div class="scroll-icon">
+                <a href="#services">&#8595</a>
+            </div>
+        </header>
+    
+        <div class="trust-badges">
+            <div class="trust-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>Secure & Reliable</span>
+            </div>
+            <div class="trust-badge">
+                <i class="fas fa-leaf"></i>
+                <span>Expert Advice</span>
+            </div>
+            <div class="trust-badge">
+                <i class="fas fa-heart"></i>
+                <span>Loved by Plant Parents</span>
+            </div>
+        </div>
+    
+        <main class="body">
+            <div class="container">
+                <div class="plant-diagonser">
+                    Plant's Personal Doctor
+                </div>
+                <div class="header1">
+                    Have you ever searched 'what's wrong with my plant'? The results may have been disappointing...<br><br>
+                    No more with <strong>Blossom!</strong> Simply snap a photo of the issue to get a diagnosis.<br><strong>Blossom!</strong> will give you detailed info on the disease, what caused it, how to treat it, and how to prevent it.
+                </div>
+                
+                <div class="diagnose-block">
+                    <div class="card">
+                        <div>
+                            <label for="fileInput" class="file-upload-label">
+                                <img src="https://th.bing.com/th/id/R.7cf76eca6b48317a83b948319850faf2?rik=0K6JakkWxbEktg&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f4%2fMagnifying-Glass-PNG-Free-Download.png&ehk=FfU29cZaycLUXSTQeQ97vIAFcKuox7jjxav4LLRljgg%3d&risl=&pid=ImgRaw&r=0" alt="Magnifying glass">
+                                <strong class="enlarge">SELECT AN IMAGE</strong>
+                                <span class="enlarge">Start diagnosing</span>
+                            </label>
+                            <input type="file" id="fileInput" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="Overwatering.webp" alt="Overwatering">
+                        <div class="card-label">Overwatering</div>
+                    </div>
+                    <div class="card">
+                        <img src="Nutrient Deficiency.jpg" alt="Nutrient Deficiency">
+                        <div class="card-label">Nutrient deficiency</div>
+                    </div>
+                    <div class="card">
+                        <img src="Powdery Mildew.jpg" alt="Powdery Mildew">
+                        <div class="card-label">Powdery mildew</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <section class="watering-section" id="services">
+            <div class="watering-container">
+                <div class="watering-header">
+                    <h2>Plant Water Calculator</h2>
+                    <p>Find out exactly how much water your plants need to thrive</p>
+                </div>
+                
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="plantType">Plant Type</label>
+                        <select id="plantType" required>
+                            <option value="">Select Plant Type</option>
+                            <option value="succulent">Succulent</option>
+                            <option value="tropical">Tropical Plant</option>
+                            <option value="cactus">Cactus</option>
+                            <option value="flowering">Flowering Plant</option>
+                            <option value="herb">Herb</option>
+                            <option value="vegetable">Vegetable</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="potSize">Pot Size (inches)</label>
+                        <input type="number" id="potSize" min="1" max="24" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="environment">Environment</label>
+                        <select id="environment" required>
+                            <option value="">Select Environment</option>
+                            <option value="indoor">Indoor</option>
+                            <option value="outdoor">Outdoor</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="lightLevel">Light Level</label>
+                        <select id="lightLevel" required>
+                            <option value="">Select Light Level</option>
+                            <option value="low">Low Light</option>
+                            <option value="medium">Medium Light</option>
+                            <option value="bright">Bright Light</option>
+                            <option value="direct">Direct Sunlight</option>
+                        </select>
+                    </div>
+    
+                    <button class="water-btn" onclick="calculateWater()">
+                        <i class="fas fa-tint"></i>
+                        Calculate Water Needs
+                    </button>
+                </div>
+    
+                <div class="result-container" id="resultContainer">
+                    <div class="result-header">
+                        <i class="fas fa-leaf"></i>
+                        <h2>Watering Recommendations</h2>
+                    </div>
+                    <div class="result-content">
+                        <div class="result-item">
+                            <span class="result-item-label">Water Amount</span>
+                            <span class="result-item-value" id="waterAmount">0 ml</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-item-label">Frequency</span>
+                            <span class="result-item-value" id="frequency">Every 0 days</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-item-label">Best Time</span>
+                            <span class="result-item-value" id="bestTime">Morning</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-item-label">Additional Tips</span>
+                            <span class="result-item-value" id="tips">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>We are dedicated to helping plant enthusiasts care for their green friends with smart technology and expert advice.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="main.html">Home</a></li>
+                        <li><a href="prediction.html">Services</a></li>
+                        <li><a href="ourteam.html">Our Team</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>Email: info@plants.com</p>
+                    <p>Phone: +91 7505521668</p>
+                    <p>Address: Waranda Butibori, IIIT NAGPUR</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61573523716995" class="social-icon">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                        <a href="https://www.instagram.com/amanmahar_12/?__pwa=1" class="social-icon">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Blossom. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </footer>
+    
+        <script>
+        function calculateWater() {
+            const plantType = document.getElementById('plantType').value;
+            const potSize = parseInt(document.getElementById('potSize').value);
+            const environment = document.getElementById('environment').value;
+            const lightLevel = document.getElementById('lightLevel').value;
+    
+            // Basic calculation logic
+            let waterAmount = potSize * 50; // Base calculation
+            let frequency = 7; // Base frequency in days
+            let bestTime = "Morning";
+            let tips = "";
+    
+            // Adjust based on plant type
+            switch(plantType) {
+                case 'succulent':
+                case 'cactus':
+                    waterAmount *= 0.5;
+                    frequency = 14;
+                    tips = "Allow soil to dry completely between waterings";
+                    break;
+                case 'tropical':
+                    waterAmount *= 1.2;
+                    frequency = 5;
+                    tips = "Maintain consistent moisture, avoid waterlogging";
+                    break;
+                case 'flowering':
+                    waterAmount *= 1.1;
+                    frequency = 4;
+                    tips = "Water at the base, avoid wetting flowers";
+                    break;
+                case 'herb':
+                case 'vegetable':
+                    waterAmount *= 1.3;
+                    frequency = 3;
+                    tips = "Water deeply and regularly for best growth";
+                    break;
+            }
+    
+            // Adjust based on environment
+            if (environment === 'outdoor') {
+                waterAmount *= 1.2;
+                frequency = Math.max(3, frequency - 2);
+            }
+    
+            // Adjust based on light level
+            if (lightLevel === 'bright' || lightLevel === 'direct') {
+                waterAmount *= 1.1;
+                frequency = Math.max(2, frequency - 1);
+            }
+    
+            // Update results
+            document.getElementById('waterAmount').textContent = `${Math.round(waterAmount)} ml`;
+            document.getElementById('frequency').textContent = `Every ${frequency} days`;
+            document.getElementById('bestTime').textContent = bestTime;
+            document.getElementById('tips').textContent = tips;
+    
+            // Show results with animation
+            const resultContainer = document.getElementById('resultContainer');
+            resultContainer.classList.add('show');
+        }
+        </script>
+    </body>
+    </html>s.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="fapp.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Services</a>
+                    <ul class="dropdown-content">
+                        <li><a href="prediction.html">Plant Diagnosis</a></li>
+                        <li><a href="waterplant.html">Water Calculator</a></li>
+                    </ul>
+                </li>
+                <li><a href="ourteam.html">Our Team</a></li>
+                <li class="logo"><strong>Blossom</strong></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><img src="logo.png" width="40px" height="40px" alt="Blossom Logo"></li>
+                <li><a class="login" href="forn.htm">Login</a></li>
+            </ul>
+        </nav>
+        
+        <div class="parallax-section">
+            <div class="glass-box hero-content">
+                <h1>Welcome to Blossom</h1>
+                <p>Your trusted companion in plant care. We combine technology and expertise to help your plants thrive.</p>
+                <button>Get Started</button>
+            </div>
+        </div>
+        
+        <div class="scroll-icon">
+            <a href="#services">&#8595</a>
+        </div>
+    </header>
+
+    <div class="trust-badges">
+        <div class="trust-badge">
+            <i class="fas fa-shield-alt"></i>
+            <span>Secure & Reliable</span>
+        </div>
+        <div class="trust-badge">
+            <i class="fas fa-leaf"></i>
+            <span>Expert Advice</span>
+        </div>
+        <div class="trust-badge">
+            <i class="fas fa-heart"></i>
+            <span>Loved by Plant Parents</span>
+        </div>
+    </div>
+
+    <main class="body">
+        <div class="container">
+            <div class="plant-diagonser">
+                Plant's Personal Doctor
+            </div>
+            <div class="header1">
+                Have you ever searched 'what's wrong with my plant'? The results may have been disappointing...<br><br>
+                No more with <strong>Blossom!</strong> Simply snap a photo of the issue to get a diagnosis.<br><strong>Blossom!</strong> will give you detailed info on the disease, what caused it, how to treat it, and how to prevent it.
+            </div>
+            
+            <div class="diagnose-block">
+                <div class="card">
+                    <div>
+                        <label for="fileInput" class="file-upload-label">
+                            <img src="https://th.bing.com/th/id/R.7cf76eca6b48317a83b948319850faf2?rik=0K6JakkWxbEktg&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f4%2fMagnifying-Glass-PNG-Free-Download.png&ehk=FfU29cZaycLUXSTQeQ97vIAFcKuox7jjxav4LLRljgg%3d&risl=&pid=ImgRaw&r=0" alt="Magnifying glass">
+                            <strong class="enlarge">SELECT AN IMAGE</strong>
+                            <span class="enlarge">Start diagnosing</span>
+                        </label>
+                        <input type="file" id="fileInput" accept="image/*">
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Overwatering.webp" alt="Overwatering">
+                    <div class="card-label">Overwatering</div>
+                </div>
+                <div class="card">
+                    <img src="Nutrient Deficiency.jpg" alt="Nutrient Deficiency">
+                    <div class="card-label">Nutrient deficiency</div>
+                </div>
+                <div class="card">
+                    <img src="Powdery Mildew.jpg" alt="Powdery Mildew">
+                    <div class="card-label">Powdery mildew</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <section class="watering-section" id="services">
+        <div class="watering-container">
+            <div class="watering-header">
+                <h2>Plant Water Calculator</h2>
+                <p>Find out exactly how much water your plants need to thrive</p>
+            </div>
+            
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="plantType">Plant Type</label>
+                    <select id="plantType" required>
+                        <option value="">Select Plant Type</option>
+                        <option value="succulent">Succulent</option>
+                        <option value="tropical">Tropical Plant</option>
+                        <option value="cactus">Cactus</option>
+                        <option value="flowering">Flowering Plant</option>
+                        <option value="herb">Herb</option>
+                        <option value="vegetable">Vegetable</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="potSize">Pot Size (inches)</label>
+                    <input type="number" id="potSize" min="1" max="24" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="environment">Environment</label>
+                    <select id="environment" required>
+                        <option value="">Select Environment</option>
+                        <option value="indoor">Indoor</option>
+                        <option value="outdoor">Outdoor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="lightLevel">Light Level</label>
+                    <select id="lightLevel" required>
+                        <option value="">Select Light Level</option>
+                        <option value="low">Low Light</option>
+                        <option value="medium">Medium Light</option>
+                        <option value="bright">Bright Light</option>
+                        <option value="direct">Direct Sunlight</option>
+                    </select>
+                </div>
+
+                <button class="water-btn" onclick="calculateWater()">
+                    <i class="fas fa-tint"></i>
+                    Calculate Water Needs
+                </button>
+            </div>
+
+            <div class="result-container" id="resultContainer">
+                <div class="result-header">
+                    <i class="fas fa-leaf"></i>
+                    <h2>Watering Recommendations</h2>
+                </div>
+                <div class="result-content">
+                    <div class="result-item">
+                        <span class="result-item-label">Water Amount</span>
+                        <span class="result-item-value" id="waterAmount">0 ml</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-item-label">Frequency</span>
+                        <span class="result-item-value" id="frequency">Every 0 days</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-item-label">Best Time</span>
+                        <span class="result-item-value" id="bestTime">Morning</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-item-label">Additional Tips</span>
+                        <span class="result-item-value" id="tips">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are dedicated to helping plant enthusiasts care for their green friends with smart technology and expert advice.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="prediction.html">Services</a></li>
+                    <li><a href="ourteam.html">Our Team</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@plants.com</p>
+                <p>Phone: +91 7505521668</p>
+                <p>Address: Waranda Butibori, IIIT NAGPUR</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61573523716995" class="social-icon">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/amanmahar_12/?__pwa=1" class="social-icon">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Blossom. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    function calculateWater() {
+        const plantType = document.getElementById('plantType').value;
+        const potSize = parseInt(document.getElementById('potSize').value);
+        const environment = document.getElementById('environment').value;
+        const lightLevel = document.getElementById('lightLevel').value;
+
+        // Basic calculation logic
+        let waterAmount = potSize * 50; // Base calculation
+        let frequency = 7; // Base frequency in days
+        let bestTime = "Morning";
+        let tips = "";
+
+        // Adjust based on plant type
+        switch(plantType) {
+            case 'succulent':
+            case 'cactus':
+                waterAmount *= 0.5;
+                frequency = 14;
+                tips = "Allow soil to dry completely between waterings";
+                break;
+            case 'tropical':
+                waterAmount *= 1.2;
+                frequency = 5;
+                tips = "Maintain consistent moisture, avoid waterlogging";
+                break;
+            case 'flowering':
+                waterAmount *= 1.1;
+                frequency = 4;
+                tips = "Water at the base, avoid wetting flowers";
+                break;
+            case 'herb':
+            case 'vegetable':
+                waterAmount *= 1.3;
+                frequency = 3;
+                tips = "Water deeply and regularly for best growth";
+                break;
+        }
+
+        // Adjust based on environment
+        if (environment === 'outdoor') {
+            waterAmount *= 1.2;
+            frequency = Math.max(3, frequency - 2);
+        }
+
+        // Adjust based on light level
+        if (lightLevel === 'bright' || lightLevel === 'direct') {
+            waterAmount *= 1.1;
+            frequency = Math.max(2, frequency - 1);
+        }
+
+        // Update results
+        document.getElementById('waterAmount').textContent = `${Math.round(waterAmount)} ml`;
+        document.getElementById('frequency').textContent = `Every ${frequency} days`;
+        document.getElementById('bestTime').textContent = bestTime;
+        document.getElementById('tips').textContent = tips;
+
+        // Show results with animation
+        const resultContainer = document.getElementById('resultContainer');
+        resultContainer.classList.add('show');
+    }
+    </script>
+</body>
+</html>
