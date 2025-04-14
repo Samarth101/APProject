@@ -11,27 +11,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-    <link  rel="stylesheet" href="main.css">
+    <link  rel="stylesheet" href="main1.css">
    
 </head>
 <body class="body">
-    <div class="decorative-background">
-        <img src="leaf.png" class="floating-leaf" width="60" />
-        <img src="leaf.png" class="floating-leaf" width="60" />
-        <img src="leaf.png" class="floating-leaf" width="60" />
-    </div>
+   
     
     <header class="header">
         <nav>
             <ul>
-                <li><a href="main.html" class="active">Home</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <div class="logo">Plants</div>
+                <li><a href="main.html">Home</a></li>
+                
+                <li><a href="prediction.html">Services</a></li>
+                <li class="logo">Plants</li>
                 <li><a href="ourteam.html">Our Team</a></li>
-            
                 <li><a href="contactus.html">Contact Us</a></li>
-                <li><img src="logo.png" width="50px" height="50px"></li>
+                <li><img src="logo.png" width="40px" height="40px"></li>
                 <li><a class="login" href="forn.htm">Login</a></li>
             </ul>
         </nav>
@@ -83,46 +78,73 @@
             </div>
         </div>
     </div>
-    <div class="body">
-        
-        <div class="watering-plant-container">
-            <div class="watering-plant-overlay"></div>
     
-            <!-- Decorative Leaves -->
-            <img src="leaf.png" class="leaf leaf1" />
-            <img src="leaf.png" class="leaf leaf2" />
-            <img src="leaf.png" class="leaf leaf3" />
-        
-            <div class="watering-section">
-                <h2>Watering Assistant</h2>
-                <p>Keep your plants hydrated! Click below to check how much water your plant needs today.</p>
-                <div class="watering-center">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2909/2909765.png" alt="Watering Can" />
-                    <h2>Smart Watering Assistant</h2>
-                    <button id="waterPlantBtn" class="water-btn">💧 Water the Plant</button>
-                    <p id="waterMessage"></p>
+    <!-- New Watering Plant Section -->
+    <section class="watering-section">
+        <div class="watering-container">
+            <div class="watering-header">
+                <h2>Plant Water Calculator</h2>
+                <p>Find out exactly how much water your plants need to thrive</p>
+            </div>
+            
+            <div class="watering-card">
+                <img src="https://th.bing.com/th/id/OIP.XaA93u2TuvDJQCtvOgF8HgHaLI?rs=1&pid=ImgDetMain" alt="Water Drop">
+                <h3>Calculate Water Needs</h3>
+                <p>Enter your plant details to get personalized watering recommendations</p>
+                <button class="water-btn" onclick="calculateWater()">
+                    <i class="fas fa-tint"></i>
+                    Calculate Water Needs
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    function calculateWater() {
+        // This will be implemented later
+        alert("Water calculation feature coming soon!");
+    }
+    </script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are dedicated to helping plant enthusiasts care for their green friends with smart technology and expert advice.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="prediction.html">Services</a></li>
+                    <li><a href="ourteam.html">Our Team</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@plants.com</p>
+                <p>Phone: +91 7505521668</p>
+                <p>Address: Waranda Butibori ,IIIT NAGPUR</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61573523716995" class="social-icon">Facebook</a>
+                    
+                    <a href="https://www.instagram.com/amanmahar_12/?__pwa=1" class="social-icon">Instagram</a>
+                   
                 </div>
             </div>
         </div>
-    
-        <script>
-            document.getElementById('waterPlantBtn').addEventListener('click', function () {
-                const waterLevels = [
-                    "🌿 Needs just 100ml of water today.",
-                    "🌊 Requires 250ml of water.",
-                    "🪴 Give it 500ml — it's thirsty!",
-                    "🌼 Minimal water needed — 50ml only.",
-                    "🌧️ No watering needed today (soil is moist)."
-                ];
-                const randomWater = waterLevels[Math.floor(Math.random() * waterLevels.length)];
-                const message = document.getElementById('waterMessage');
-                message.classList.remove('show');
-                setTimeout(() => {
-                    message.innerText = randomWater;
-                    message.classList.add('show');
-                }, 200);
-            });
-        </script>
-    
-
+        <div class="footer-bottom">
+            <p>&copy; 2025 Blossom. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
